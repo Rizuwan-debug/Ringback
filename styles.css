@@ -1215,13 +1215,26 @@ section{
 .service-line{
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   gap: 24px;
-  padding: 20px 0;
+  padding: 20px 4px;
+  margin: 0 -4px;
   border-top: 1px solid var(--line);
+  border-radius: 3px;
+  transition: background .2s var(--ease), padding-left .2s var(--ease);
 }
 .service-list li:last-child .service-line{
   border-bottom: 1px solid var(--line);
+}
+a.service-line:hover,
+a.service-line:focus-visible{
+  background: var(--cream-alt);
+  padding-left: 14px;
+}
+.service-text{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 .service-line h4{
   font-size: 18px;
@@ -1231,8 +1244,21 @@ section{
 .service-line p{
   font-size: 14.5px;
   color: var(--charcoal-soft);
-  text-align: right;
   max-width: 420px;
+}
+.service-arrow{
+  flex: none;
+  font-size: 16px;
+  color: var(--charcoal-faint);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity .2s var(--ease), transform .2s var(--ease), color .2s var(--ease);
+}
+a.service-line:hover .service-arrow,
+a.service-line:focus-visible .service-arrow{
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--orange);
 }
 .service-list{
   list-style: none;
@@ -1246,8 +1272,9 @@ section{
   color: var(--charcoal-faint);
 }
 @media (max-width: 700px){
-  .service-line{ flex-direction: column; align-items: flex-start; gap: 6px; }
-  .service-line p{ text-align: left; max-width: none; }
+  .service-line{ gap: 12px; }
+  .service-line p{ max-width: none; }
+  .service-arrow{ opacity: 0.5; transform: none; }
 }
 
 .reveal{
@@ -1318,3 +1345,18 @@ section{
   color: var(--orange);
   border-color: var(--orange);
 }
+
+.service-banner{
+  display: none;
+  max-width: 640px;
+  margin: 0 auto 24px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--orange);
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  padding: 10px 16px;
+}
+.service-banner.visible{ display: block; }
