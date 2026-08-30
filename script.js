@@ -36,16 +36,22 @@
     targets.forEach(function(el){ io.observe(el); });
   }
 
-  // Contact form (static demo — no backend wired up)
-  var form = document.querySelector('.audit-form');
-  if(form){
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      var status = form.querySelector('.form-status');
-      if(status){
-        status.textContent = 'Thanks — this is a demonstration form and isn\u2019t connected yet. Email ringback.co@gmail.com directly to reach us.';
-        status.classList.add('visible');
+  // Pre-fill "what would you like to automate" from a ?service= query param
+  // (used when arriving from a Solutions page link)
+  var automateField = document.getElementById('automate');
+  if(automateField){
+    var params = new URLSearchParams(window.location.search);
+    var service = params.get('service');
+    if(service){
+      automateField.value = "I'd like to build: " + service + "\n\n";
+      var banner = document.getElementById('service-banner');
+      if(banner){
+        banner.textContent = 'Asking about: ' + service;
+        banner.classList.add('visible');
       }
-    });
+    }
   }
+
+  // Contact form now submits for real via FormSubmit (see action= on the <form> tag) —
+  // no JS interception needed. The browser's native required-field validation still runs.
 })();
