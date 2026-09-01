@@ -1151,13 +1151,13 @@ section{
   border-left: 1px solid var(--line);
 }
 .explore-card{
-  padding: 36px 28px;
+  padding: 22px 22px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 200px;
+  min-height: 130px;
   transition: background .2s var(--ease);
 }
 .explore-card:hover{
@@ -1165,22 +1165,22 @@ section{
 }
 .explore-num{
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 11px;
   color: var(--charcoal-faint);
   margin-bottom: auto;
 }
 .explore-card h3{
-  font-size: 21px;
-  margin: 24px 0 8px;
+  font-size: 17px;
+  margin: 12px 0 4px;
 }
 .explore-card p{
-  font-size: 14px;
+  font-size: 13px;
   color: var(--charcoal-soft);
-  line-height: 1.5;
-  margin-bottom: 16px;
+  line-height: 1.45;
+  margin-bottom: 10px;
 }
 .explore-arrow{
-  font-size: 18px;
+  font-size: 15px;
   color: var(--charcoal);
   transition: transform .2s var(--ease), color .2s var(--ease);
 }
