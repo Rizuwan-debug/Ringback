@@ -1,0 +1,16 @@
+# Ringback
+
+> Ringback connects AI, software, and automation to the way a business already works — handling repetitive tasks, capturing opportunities, and keeping systems moving without adding headcount.
+
+Ringback is a technology implementation and integration studio. Given a business problem, Ringback identifies the workflow, chooses the right tools, connects the systems, and builds the finished solution.
+
+## Pages
+
+- [Home](https://ringback-systems.vercel.app/): Overview of what Ringback does and builds.
+- [Solutions](https://ringback-systems.vercel.app/solutions): Full list of services — AI call answering, website chat, lead intake, workflow automation, follow-ups, review automation, reporting, document processing, AI assistants, and custom AI integration — with starting prices.
+- [About](https://ringback-systems.vercel.app/about): What Ringback believes and how it approaches a problem.
+- [Contact](https://ringback-systems.vercel.app/contact): Request an automation audit.
+
+## Contact
+
+ringback.co@gmail.com

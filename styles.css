@@ -729,6 +729,12 @@ section{
   line-height: 1.6;
 }
 .final-cta .hero-actions{ margin-top: 36px; }
+.price-note{
+  margin-top: 18px;
+  font-size: 13.5px;
+  color: var(--charcoal-faint);
+  font-style: italic;
+}
 
 /* ---------------- Footer ---------------- */
 .site-footer{
@@ -1216,7 +1222,7 @@ section{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
   padding: 20px 4px;
   margin: 0 -4px;
   border-top: 1px solid var(--line);
@@ -1244,7 +1250,24 @@ a.service-line:focus-visible{
 .service-line p{
   font-size: 14.5px;
   color: var(--charcoal-soft);
-  max-width: 420px;
+  max-width: 380px;
+}
+.service-meta{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: none;
+}
+.service-price{
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--charcoal-faint);
+  white-space: nowrap;
+  transition: color .2s var(--ease);
+}
+a.service-line:hover .service-price,
+a.service-line:focus-visible .service-price{
+  color: var(--charcoal);
 }
 .service-arrow{
   flex: none;
@@ -1275,6 +1298,34 @@ a.service-line:focus-visible .service-arrow{
   .service-line{ gap: 12px; }
   .service-line p{ max-width: none; }
   .service-arrow{ opacity: 0.5; transform: none; }
+  .service-price{ font-size: 12px; }
+}
+
+/* ---------------- Solutions page — category blocks ---------------- */
+.cat-block{ margin-bottom: 48px; }
+.cat-block:last-child{ margin-bottom: 0; }
+.cat-head{
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.cat-num{
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--orange);
+  flex: none;
+}
+.cat-head h3{
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--charcoal);
+  letter-spacing: -0.01em;
+}
+.cat-head p{
+  font-size: 14px;
+  color: var(--charcoal-faint);
+  margin-top: 4px;
 }
 
 .reveal{
